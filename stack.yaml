@@ -1,4 +1,4 @@
-resolver: lts-6.35
+resolver: lts-9.12
 
 packages:
 - '.'
@@ -6,3 +6,6 @@ packages:
 extra-deps:
 - ks-test-0.1
 - roots-0.1.1.2
+- gamma-0.9.0.2
+- continued-fractions-0.9.1.1
+- converge-0.1.0.1

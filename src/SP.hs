@@ -16,7 +16,7 @@ import Data.Tuple.Strict (Pair(..))
 import Control.Monad.State.Strict hiding (state)
 import Control.Monad.State.Class
 import Control.Monad.Reader
-import Control.Monad.Random -- From cabal install MonadRandom
+import Control.Monad.Random hiding (weighted) -- From cabal install MonadRandom
 import Control.Lens hiding (List) -- from cabal install lens
 import qualified Data.Vector as V
 
