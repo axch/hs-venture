@@ -48,7 +48,21 @@ cabal-version:       >=1.10
 
 library
   -- Modules exported by the library.
-  exposed-modules:     Examples, Utils, Language, Inference, Trace, Unique, Detach, SP, Regen, InsertionOrderedSet, Venture, ExamplesEmbedded, Subproblem
+  exposed-modules:
+    Detach,
+    Distributions,
+    Examples,
+    ExamplesEmbedded,
+    Inference,
+    InsertionOrderedSet,
+    Language,
+    Regen,
+    SP,
+    Subproblem,
+    Trace,
+    Unique,
+    Utils,
+    Venture
 
   -- Modules included in this library but not exported.
   -- other-modules:       
@@ -102,6 +116,20 @@ executable venture-server
   default-language:    Haskell2010
   Ghc-options:         -Wall -fno-warn-name-shadowing -O2
   hs-source-dirs:      src
+  other-modules:
+    Detach,
+    Distributions,
+    Inference,
+    InsertionOrderedSet,
+    Language,
+    Regen,
+    SP,
+    Subproblem,
+    Trace,
+    Unique,
+    Utils,
+    Venture,
+    WireProtocol
 
 executable benchmark
   main-is:             Benchmark.hs
@@ -114,3 +142,16 @@ executable benchmark
   Ghc-options:         -Wall -fno-warn-name-shadowing -O2 -ddump-simpl -ddump-stg -ddump-to-file
   ghc-prof-options:    -fprof-auto -rtsopts "-with-rtsopts=-s"
   hs-source-dirs:      src
+  other-modules:
+    Detach,
+    Distributions,
+    Inference,
+    InsertionOrderedSet,
+    Language,
+    Regen,
+    SP,
+    Subproblem,
+    Trace,
+    Unique,
+    Utils,
+    Venture
