@@ -22,7 +22,7 @@ import qualified Data.Map.Strict as M
 import qualified Data.Set as S
 import qualified Data.Text as DT
 import qualified Data.Vector as V
-import Control.Lens hiding (children)  -- from cabal install lens
+import Control.Lens hiding (children, List)  -- from cabal install lens
 import Control.Monad.State.Strict hiding (state) -- :set -hide-package monads-tf-0.1.0.1
 import Control.Monad.Writer.Class
 import Control.Monad.Reader

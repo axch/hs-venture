@@ -28,8 +28,15 @@ class Monad m => UniqueSourceMonad m where
 instance MonadTrans UniqueSourceT where
     lift = UniqueSourceT . lift
 
+instance Monad f => Functor (UniqueSourceT f) where
+    fmap = liftM
+
+instance Monad f => Applicative (UniqueSourceT f) where
+    pure = UniqueSourceT . pure
+    (<*>) = ap
+
 instance Monad m => Monad (UniqueSourceT m) where
-    return = UniqueSourceT . return
+    return = pure
     (UniqueSourceT act) >>= f = UniqueSourceT (act >>= (unwrap . f))
 
 instance Monad m => UniqueSourceMonad (UniqueSourceT m) where

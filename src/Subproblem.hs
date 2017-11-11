@@ -1,10 +1,11 @@
+{-# LANGUAGE FlexibleContexts #-}
 {-# LANGUAGE TemplateHaskell, DoAndIfThenElse #-}
 {-# LANGUAGE TupleSections #-}
 {-# LANGUAGE ViewPatterns #-}
 
 module Subproblem where
 
-import Control.Lens hiding (children)
+import Control.Lens hiding (children, (:<))
 import Control.Monad.Reader hiding (mapM_, sequence_)
 import Control.Monad.Trans.State.Strict
 import Data.Foldable
