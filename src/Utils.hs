@@ -8,7 +8,6 @@ module Utils (module Utils, module Unique) where
 
 import Debug.Trace
 import Data.List (find)
-import Data.Monoid
 import qualified Data.Map.Strict as M
 import qualified Data.Maybe.Strict as Strict
 import qualified Data.Set as S

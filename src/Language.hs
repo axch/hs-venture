@@ -6,10 +6,7 @@
 module Language where
 
 import Prelude hiding (lookup)
-import Data.Foldable
 import qualified Data.Map.Strict as M
-import Data.Monoid
-import Data.Traversable
 import Data.Text
 import qualified Data.Vector as V
 

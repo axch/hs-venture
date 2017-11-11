@@ -26,6 +26,6 @@ observed_chained_normals ct = evalStateT prog initial where
     prog = do
       _ <- assume "x" $ T.app (T.var "normal") [0, 2]
       _ <- assume "y" $ T.app (T.var "normal") [(T.var "x"), 2]
-      observe (T.var "y") 4
+      _ <- observe (T.var "y") 4
       replicateM_ ct $ resimulation_mh I.default_one
       sampleM (T.var "x")
