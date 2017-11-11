@@ -1,3 +1,5 @@
+{-# LANGUAGE OverloadedStrings #-}
+
 module GradientTest where
 
 import Control.Lens  -- from cabal install lens
@@ -5,6 +7,7 @@ import Control.Monad
 import Control.Monad.Trans.State.Strict
 import Data.Functor.Compose
 import qualified Data.Map as Map
+import qualified Data.Vector as V
 import Numeric.AD.Mode.Reverse (grad)
 
 import qualified Language as L
@@ -27,7 +30,7 @@ test_grad = evalStateT prog initial where
   unlog (L.LogDensity x) = x
 
 principal_values :: Scaffold -> Model m num -> Map.Map Trace.Address (Trace.Value num)
-principal_values scaffold model = Map.fromList $ zip as $ map (flip lookupValue model) as where
+principal_values scaffold model = Map.fromList $ V.toList $ V.zip as $ fmap (flip lookupValue model) as where
     as = _principal scaffold
 
 main :: IO ()

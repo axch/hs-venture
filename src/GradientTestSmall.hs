@@ -77,11 +77,11 @@ answer5 = let box :: (Num a) => Box a
 -- This situation should be analogous to answer2, but how do I change
 -- the Num instance with which the function inside the box is
 -- interpreted?
-answer6 :: (Monad m, Num a) => m [a]
-answer6 = do
-  box_3 <- return $ Box inc
-  return $ grad (head . fmap (unBox $ xxx box_3)) [0] where
-  xxx = id -- ???
+-- answer6 :: (Monad m, Num a) => m [a]
+-- answer6 = do
+--   box_3 <- return $ Box inc
+--   return $ grad (head . fmap (unBox $ xxx box_3)) [0] where
+--   xxx = id -- ???
 
 -- Ed Kmett suggests making the number type inside the box
 -- existential:
