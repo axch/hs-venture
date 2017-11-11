@@ -99,6 +99,22 @@ Test-suite tests
   default-language:    Haskell2010
   Ghc-options:         -Wall -fno-warn-name-shadowing -O2
   hs-source-dirs:      src
+  other-modules:
+    Detach,
+    Distributions,
+    Examples,
+    Inference,
+    InsertionOrderedSet,
+    InterpretationTest,
+    Language,
+    Regen,
+    SP,
+    Statistical,
+    Subproblem,
+    Trace,
+    Unique,
+    Utils,
+    Venture
 
 executable venture-server
   main-is:             Server.hs
